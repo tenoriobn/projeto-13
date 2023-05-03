@@ -1,0 +1,44 @@
+@import '../1-base/variaveis';
+
+.graphic {
+    background-color: $very-pale-orange;
+    border-radius: .625rem;
+    padding: 1.75rem 1.25rem;
+
+    &__subtitle {
+        @include font-styling($dark-brown, 1.5rem, 700);
+        margin-bottom: 3.25rem;
+    }
+
+    /*
+        Aqui vai o canvas
+    */
+    
+    .container__month {
+        border-top: 1px solid $cream;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        margin-top: 1.75rem;
+        padding-top: 1.75rem;
+
+        .month {
+            &__subtitle, &__description {
+                @include font-styling($medium-brown, .9375rem, 400);
+            }
+
+            &__value {
+                @include font-styling($dark-brown, 1.875rem, 700);
+                margin-top: 1rem
+            }
+
+            &__percent {
+                @include font-styling($dark-brown, 1rem, 700);
+                text-align: end;
+                margin-bottom: .5rem;
+            }
+        }
+    }
+}

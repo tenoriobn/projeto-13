@@ -10,3 +10,10 @@ $white: #FFFFFF;
 
 // Fonts
 $dm-sans: 'DM Sans', sans-serif;
+
+// Mixins
+@mixin font-styling($color, $fonte-size, $font-weight) {
+    color: $color;
+    font-size: $fonte-size;
+    font-weight: $font-weight;
+}

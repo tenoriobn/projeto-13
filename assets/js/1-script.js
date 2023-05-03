@@ -7,3 +7,16 @@
         - **Bônus**: Use o arquivo de dados JSON fornecido para dimensionar dinamicamente as barras no gráfico
 */
 
+const graphicBar = document.getElementById('graphic__bar');
+
+const canvasBarChart = new Chart(graphicBar, {
+    type: 'bar',
+    data: {
+        labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3, 3],
+            borderWidth: 1
+        }]
+    },
+});

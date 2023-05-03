@@ -1,7 +1,23 @@
 @import './reset';
 @import './variaveis';
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import '../2-componentes/1-balance';
+@import '../2-componentes/2-graphic';
 
 body {
-    font-size: 1.125rem;
+    box-sizing: border-box;
+    background-color: $cream;
+
+    @include font-styling($very-pale-orange, 1.125rem, 400);
+    font-family: $dm-sans;
+
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100vh;
+    width: 100%;
 }
