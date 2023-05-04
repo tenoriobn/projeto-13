@@ -14,9 +14,28 @@ const canvasBarChart = new Chart(graphicBar, {
     data: {
         labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
         datasets: [{
-            label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3, 3],
-            borderWidth: 1
+            borderRadius: 3,
+            backgroundColor: 'hsl(10, 79%, 65%)',
+            hoverBackgroundColor: 'hsl(186, 34%, 60%)',
         }]
+    },
+
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                }
+            },
+            y: {
+                display: false
+            }
+        },
     },
 });

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
     v2.0 | 20110126
     License: none (public domain)
@@ -64,7 +65,7 @@ table {
 }
 .container__balance .balance__subtitle {
   color: hsl(27, 66%, 92%);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 400;
   margin-bottom: 0.875rem;
 }
@@ -74,19 +75,31 @@ table {
   font-weight: 700;
 }
 
+@media screen and (min-width: 768px) {
+  .container__balance .balance__subtitle {
+    color: "";
+    font-size: 1.125rem;
+    font-weight: "";
+  }
+  .container__balance .balance__amount {
+    color: "";
+    font-size: 2rem;
+    font-weight: "";
+  }
+}
 .graphic {
   background-color: hsl(33, 100%, 98%);
   border-radius: 0.625rem;
   padding: 1.75rem 1.25rem;
-  /*
-      Aqui vai o canvas
-  */
 }
 .graphic__subtitle {
   color: hsl(25, 47%, 15%);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 3.25rem;
+}
+.graphic__bar {
+  width: 100% !important;
 }
 .graphic .container__month {
   border-top: 1px solid hsl(27, 66%, 92%);
@@ -98,12 +111,12 @@ table {
 }
 .graphic .container__month .month__subtitle, .graphic .container__month .month__description {
   color: hsl(28, 10%, 53%);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 .graphic .container__month .month__value {
   color: hsl(25, 47%, 15%);
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   font-weight: 700;
   margin-top: 1rem;
 }
@@ -115,6 +128,62 @@ table {
   margin-bottom: 0.5rem;
 }
 
+@media screen and (min-width: 375px) {
+  .graphic__subtitle {
+    color: "";
+    font-size: 1.5rem;
+    font-weight: "";
+  }
+  .graphic .container__month .month__subtitle, .graphic .container__month .month__description {
+    color: "";
+    font-size: 0.9375rem;
+    font-weight: "";
+  }
+  .graphic .container__month .month__value {
+    color: "";
+    font-size: 1.875rem;
+    font-weight: "";
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .graphic__subtitle {
+    color: "";
+    font-size: 2rem;
+    font-weight: "";
+  }
+  .graphic .container__month .month__subtitle, .graphic .container__month .month__description {
+    color: hsl(28, 10%, 53%);
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+  .graphic .container__month .month__value {
+    color: "";
+    font-size: 3rem;
+    font-weight: "";
+    margin-top: 1rem;
+  }
+  .graphic .container__month .month__percent {
+    color: hsl(25, 47%, 15%);
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: end;
+    margin-bottom: 0.5rem;
+  }
+}
+/*
+    -   Estilizar gráfico (Tamanho de largura do gráfico, cor da barra ao passar mouse por cima, cor da barra ao ser selecionada, 
+    cor e fonte das informações do pop-up barra selecionada).
+
+    -   Corrigir largura dos elementos, de modo que respeitem os paddings laterais.**
+    -   Definir tamanho max de largura.**
+    -   Conferir estilização no tamanho minimo e readptar se necessário**
+
+    - Remover padding na versão tablet e desktop**
+    - Aumentar tamanho das fontes para versão tablet e desktop**
+
+    Após isso, partir para o js.
+*/
 body {
   box-sizing: border-box;
   background-color: hsl(27, 66%, 92%);
@@ -129,4 +198,14 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100%;
+}
+body .main {
+  max-width: 540px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0 0rem;
+  }
 }/*# sourceMappingURL=base.css.map */

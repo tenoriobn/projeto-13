@@ -6,14 +6,15 @@
     padding: 1.75rem 1.25rem;
 
     &__subtitle {
-        @include font-styling($dark-brown, 1.5rem, 700);
+        @include font-styling($dark-brown, 1.25rem, 700);
         margin-bottom: 3.25rem;
     }
 
-    /*
-        Aqui vai o canvas
-    */
-    
+    &__bar {
+        width: 100%!important;
+
+    }
+
     .container__month {
         border-top: 1px solid $cream;
         
@@ -26,11 +27,11 @@
 
         .month {
             &__subtitle, &__description {
-                @include font-styling($medium-brown, .9375rem, 400);
+                @include font-styling($medium-brown, .875rem, 400);
             }
 
             &__value {
-                @include font-styling($dark-brown, 1.875rem, 700);
+                @include font-styling($dark-brown, 1.75rem, 700);
                 margin-top: 1rem
             }
 
@@ -42,3 +43,65 @@
         }
     }
 }
+
+@media screen and (min-width: 375px) {
+    .graphic {
+        &__subtitle {
+            @include font-styling('', 1.5rem, '');
+        }
+    
+        .container__month {
+            .month {
+                &__subtitle, &__description {
+                    @include font-styling('', .9375rem, '');
+                }
+    
+                &__value {
+                    @include font-styling('', 1.875rem, '');
+                    margin-top: 1rem
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .graphic {
+        &__subtitle {
+            @include font-styling('', 2rem, '');
+        }
+    
+        .container__month {
+            .month {
+                &__subtitle, &__description {
+                    @include font-styling($medium-brown, 1.125rem, 400);
+                }
+    
+                &__value {
+                    @include font-styling('', 3rem, '');
+                    margin-top: 1rem
+                }
+    
+                &__percent {
+                    @include font-styling($dark-brown, 1.125rem, 700);
+                    text-align: end;
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+}
+
+/*
+    -   Estilizar gráfico (Tamanho de largura do gráfico, cor da barra ao passar mouse por cima, cor da barra ao ser selecionada, 
+    cor e fonte das informações do pop-up barra selecionada).
+    
+    -   Corrigir largura dos elementos, de modo que respeitem os paddings laterais.**
+    -   Definir tamanho max de largura.**
+    -   Conferir estilização no tamanho minimo e readptar se necessário**
+
+    - Remover padding na versão tablet e desktop**
+    - Aumentar tamanho das fontes para versão tablet e desktop**
+
+    Após isso, partir para o js.
+*/
