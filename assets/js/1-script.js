@@ -89,4 +89,3 @@ const canvasBarChart = new Chart(graphicBar, {
 }); 
 
 graphicValues(canvasBarChart);
-
