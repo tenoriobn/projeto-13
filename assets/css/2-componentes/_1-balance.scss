@@ -20,6 +20,7 @@
 
         &__amount {
             @include font-styling($very-pale-orange, 1.5rem, 700);
+            cursor: pointer;
         }
     }
 }

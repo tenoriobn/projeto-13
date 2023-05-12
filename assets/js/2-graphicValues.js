@@ -32,4 +32,3 @@ export default function graphicValues(canvasBarChart) {
     })
     .catch(error => console.error(error));
 }
-

@@ -13,6 +13,7 @@
     &__bar {
         width: 100%!important;
         height: 100%!important;
+        cursor: pointer!important;
     }
 
     .container__month {
@@ -32,7 +33,8 @@
 
             &__value {
                 @include font-styling($dark-brown, 1.75rem, 700);
-                margin-top: 1rem
+                margin-top: 1rem;
+                cursor: pointer;
             }
 
             &__percent {

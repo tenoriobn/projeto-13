@@ -1,14 +1,3 @@
-/*
-    Implementações:
-        - Veja o layout ideal para o conteúdo, dependendo do tamanho da tela do dispositivo**
-        - Visualize o gráfico de barras e passe o mouse sobre as barras individuais para ver os valores corretos para cada dia**
-        - Use o arquivo de dados JSON fornecido para dimensionar dinamicamente as barras no gráfico**
-        - Veja os estados de foco para todos os elementos interativos na página**
-        - Veja a barra do dia atual destacada em uma cor diferente das outras barras**
-        
-        - Arrumar tamanho da barra de gráfico em relação a caixa de dicas
-*/
-
 import graphicValues from "./2-graphicValues.js";
 
 const graphicBar = document.getElementById('graphic__bar');
@@ -51,7 +40,7 @@ const canvasBarChart = new Chart(graphicBar, {
 
                 callbacks: {
                     title: function() {
-                        return ''; // Retorna uma string vazia para remover o título (labels)
+                        return '';
                     },
                     label: function(context) {
                         let label = context.dataset.label || '';
@@ -89,3 +78,18 @@ const canvasBarChart = new Chart(graphicBar, {
 }); 
 
 graphicValues(canvasBarChart);
+
+window.addEventListener('resize', () => {
+    graphicValues(canvasBarChart);
+});
+
+/*
+    Implementações:
+        - Veja o layout ideal para o conteúdo, dependendo do tamanho da tela do dispositivo**
+        - Visualize o gráfico de barras e passe o mouse sobre as barras individuais para ver os valores corretos para cada dia**
+        - Use o arquivo de dados JSON fornecido para dimensionar dinamicamente as barras no gráfico**
+        - Veja os estados de foco para todos os elementos interativos na página**
+        - Veja a barra do dia atual destacada em uma cor diferente das outras barras**
+        
+        - Arrumar tamanho da barra de gráfico em relação a caixa de dicas*
+*/

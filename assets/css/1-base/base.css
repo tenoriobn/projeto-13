@@ -73,6 +73,7 @@ table {
   color: hsl(33, 100%, 98%);
   font-size: 1.5rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -101,6 +102,7 @@ table {
 .graphic__bar {
   width: 100% !important;
   height: 100% !important;
+  cursor: pointer !important;
 }
 .graphic .container__month {
   border-top: 1px solid hsl(27, 66%, 92%);
@@ -120,6 +122,7 @@ table {
   font-size: 1.75rem;
   font-weight: 700;
   margin-top: 1rem;
+  cursor: pointer;
 }
 .graphic .container__month .month__percent {
   color: hsl(25, 47%, 15%);
